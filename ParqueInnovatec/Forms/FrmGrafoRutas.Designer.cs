@@ -33,7 +33,7 @@
             this.tbPeso = new System.Windows.Forms.TextBox();
             this.btnAgregarConexiones = new System.Windows.Forms.Button();
             this.btnRutaCorta = new System.Windows.Forms.Button();
-            this.btnMostarConexiones = new System.Windows.Forms.Button();
+            this.btnMostarConexioness = new System.Windows.Forms.Button();
             this.lbConexiones = new System.Windows.Forms.ListBox();
             this.lbRutas = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -80,14 +80,14 @@
             this.btnRutaCorta.Text = "Ruta mas corta";
             this.btnRutaCorta.UseVisualStyleBackColor = true;
             // 
-            // btnMostarConexiones
+            // btnMostarConexioness
             // 
-            this.btnMostarConexiones.Location = new System.Drawing.Point(324, 99);
-            this.btnMostarConexiones.Name = "btnMostarConexiones";
-            this.btnMostarConexiones.Size = new System.Drawing.Size(166, 36);
-            this.btnMostarConexiones.TabIndex = 5;
-            this.btnMostarConexiones.Text = "Mostar conexiones";
-            this.btnMostarConexiones.UseVisualStyleBackColor = true;
+            this.btnMostarConexioness.Location = new System.Drawing.Point(324, 99);
+            this.btnMostarConexioness.Name = "btnMostarConexioness";
+            this.btnMostarConexioness.Size = new System.Drawing.Size(166, 36);
+            this.btnMostarConexioness.TabIndex = 5;
+            this.btnMostarConexioness.Text = "Mostar conexiones";
+            this.btnMostarConexioness.UseVisualStyleBackColor = true;
             // 
             // lbConexiones
             // 
@@ -144,7 +144,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbRutas);
             this.Controls.Add(this.lbConexiones);
-            this.Controls.Add(this.btnMostarConexiones);
+            this.Controls.Add(this.btnMostarConexioness);
             this.Controls.Add(this.btnRutaCorta);
             this.Controls.Add(this.btnAgregarConexiones);
             this.Controls.Add(this.tbPeso);
@@ -164,7 +164,7 @@
         private System.Windows.Forms.TextBox tbPeso;
         private System.Windows.Forms.Button btnAgregarConexiones;
         private System.Windows.Forms.Button btnRutaCorta;
-        private System.Windows.Forms.Button btnMostarConexiones;
+        private System.Windows.Forms.Button btnMostarConexioness;
         private System.Windows.Forms.ListBox lbConexiones;
         private System.Windows.Forms.ListBox lbRutas;
         private System.Windows.Forms.Label label1;
