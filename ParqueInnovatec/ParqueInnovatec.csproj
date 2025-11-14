@@ -72,6 +72,9 @@
     <EmbeddedResource Include="Forms\FrmArbolJerarquia.resx">
       <DependentUpon>FrmArbolJerarquia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmGrafoRutas.resx">
+      <DependentUpon>FrmGrafoRutas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>

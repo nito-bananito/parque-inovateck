@@ -31,23 +31,25 @@
             this.tvJerarquia = new System.Windows.Forms.TreeView();
             this.label1 = new System.Windows.Forms.Label();
             this.btnInsertar = new System.Windows.Forms.Button();
-            this.tbDato = new System.Windows.Forms.TextBox();
+            this.tbArbolP = new System.Windows.Forms.TextBox();
             this.btnRecorrer = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnContar = new System.Windows.Forms.Button();
+            this.tbArbolH = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tvJerarquia
             // 
-            this.tvJerarquia.Location = new System.Drawing.Point(38, 81);
+            this.tvJerarquia.Location = new System.Drawing.Point(12, 99);
             this.tvJerarquia.Name = "tvJerarquia";
-            this.tvJerarquia.Size = new System.Drawing.Size(287, 339);
+            this.tvJerarquia.Size = new System.Drawing.Size(510, 339);
             this.tvJerarquia.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 29);
+            this.label1.Location = new System.Drawing.Point(35, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(111, 20);
             this.label1.TabIndex = 1;
@@ -62,12 +64,12 @@
             this.btnInsertar.Text = "Insertar";
             this.btnInsertar.UseVisualStyleBackColor = true;
             // 
-            // tbDato
+            // tbArbolP
             // 
-            this.tbDato.Location = new System.Drawing.Point(169, 29);
-            this.tbDato.Name = "tbDato";
-            this.tbDato.Size = new System.Drawing.Size(156, 26);
-            this.tbDato.TabIndex = 3;
+            this.tbArbolP.Location = new System.Drawing.Point(170, 14);
+            this.tbArbolP.Name = "tbArbolP";
+            this.tbArbolP.Size = new System.Drawing.Size(156, 26);
+            this.tbArbolP.TabIndex = 3;
             // 
             // btnRecorrer
             // 
@@ -96,15 +98,33 @@
             this.btnContar.Text = "Contar";
             this.btnContar.UseVisualStyleBackColor = true;
             // 
+            // tbArbolH
+            // 
+            this.tbArbolH.Location = new System.Drawing.Point(170, 61);
+            this.tbArbolH.Name = "tbArbolH";
+            this.tbArbolH.Size = new System.Drawing.Size(156, 26);
+            this.tbArbolH.TabIndex = 7;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(35, 60);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(112, 20);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Ingresar rama:";
+            // 
             // FrmArbolJerarquia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(541, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.tbArbolH);
             this.Controls.Add(this.btnContar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnRecorrer);
-            this.Controls.Add(this.tbDato);
+            this.Controls.Add(this.tbArbolP);
             this.Controls.Add(this.btnInsertar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tvJerarquia);
@@ -120,9 +140,11 @@
         private System.Windows.Forms.TreeView tvJerarquia;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnInsertar;
-        private System.Windows.Forms.TextBox tbDato;
+        private System.Windows.Forms.TextBox tbArbolP;
         private System.Windows.Forms.Button btnRecorrer;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnContar;
+        private System.Windows.Forms.TextBox tbArbolH;
+        private System.Windows.Forms.Label label2;
     }
 }
