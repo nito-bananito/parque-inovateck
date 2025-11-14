@@ -34,8 +34,8 @@
             this.btnAgregarConexiones = new System.Windows.Forms.Button();
             this.btnRutaCorta = new System.Windows.Forms.Button();
             this.btnMostarConexiones = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.lbConexiones = new System.Windows.Forms.ListBox();
+            this.lbRutas = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,7 +43,7 @@
             // 
             // tbOrigen
             // 
-            this.tbOrigen.Location = new System.Drawing.Point(108, 20);
+            this.tbOrigen.Location = new System.Drawing.Point(108, 23);
             this.tbOrigen.Name = "tbOrigen";
             this.tbOrigen.Size = new System.Drawing.Size(183, 26);
             this.tbOrigen.TabIndex = 0;
@@ -89,50 +89,50 @@
             this.btnMostarConexiones.Text = "Mostar conexiones";
             this.btnMostarConexiones.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // lbConexiones
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(37, 140);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(236, 284);
-            this.listBox1.TabIndex = 6;
+            this.lbConexiones.FormattingEnabled = true;
+            this.lbConexiones.ItemHeight = 20;
+            this.lbConexiones.Location = new System.Drawing.Point(37, 140);
+            this.lbConexiones.Name = "lbConexiones";
+            this.lbConexiones.Size = new System.Drawing.Size(236, 284);
+            this.lbConexiones.TabIndex = 6;
             // 
-            // listBox2
+            // lbRutas
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 20;
-            this.listBox2.Location = new System.Drawing.Point(296, 140);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(215, 284);
-            this.listBox2.TabIndex = 7;
+            this.lbRutas.FormattingEnabled = true;
+            this.lbRutas.ItemHeight = 20;
+            this.lbRutas.Location = new System.Drawing.Point(296, 140);
+            this.lbRutas.Name = "lbRutas";
+            this.lbRutas.Size = new System.Drawing.Size(215, 284);
+            this.lbRutas.TabIndex = 7;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 20);
+            this.label1.Location = new System.Drawing.Point(33, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
+            this.label1.Size = new System.Drawing.Size(60, 20);
             this.label1.TabIndex = 8;
-            this.label1.Text = "label1";
+            this.label1.Text = "Origen:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 62);
+            this.label2.Location = new System.Drawing.Point(25, 68);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 20);
+            this.label2.Size = new System.Drawing.Size(68, 20);
             this.label2.TabIndex = 9;
-            this.label2.Text = "label2";
+            this.label2.Text = "Destino:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 104);
+            this.label3.Location = new System.Drawing.Point(23, 110);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 20);
+            this.label3.Size = new System.Drawing.Size(79, 20);
             this.label3.TabIndex = 10;
-            this.label3.Text = "label3";
+            this.label3.Text = "Distancia:";
             // 
             // FrmGrafoRutas
             // 
@@ -142,8 +142,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.lbRutas);
+            this.Controls.Add(this.lbConexiones);
             this.Controls.Add(this.btnMostarConexiones);
             this.Controls.Add(this.btnRutaCorta);
             this.Controls.Add(this.btnAgregarConexiones);
@@ -165,8 +165,8 @@
         private System.Windows.Forms.Button btnAgregarConexiones;
         private System.Windows.Forms.Button btnRutaCorta;
         private System.Windows.Forms.Button btnMostarConexiones;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox lbConexiones;
+        private System.Windows.Forms.ListBox lbRutas;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
