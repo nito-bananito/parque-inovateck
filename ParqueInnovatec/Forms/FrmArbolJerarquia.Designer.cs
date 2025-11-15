@@ -51,7 +51,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 17);
+            this.label1.Location = new System.Drawing.Point(12, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(111, 20);
             this.label1.TabIndex = 1;
@@ -69,9 +69,9 @@
             // 
             // tbArbolP
             // 
-            this.tbArbolP.Location = new System.Drawing.Point(170, 14);
+            this.tbArbolP.Location = new System.Drawing.Point(129, 14);
             this.tbArbolP.Name = "tbArbolP";
-            this.tbArbolP.Size = new System.Drawing.Size(156, 26);
+            this.tbArbolP.Size = new System.Drawing.Size(203, 26);
             this.tbArbolP.TabIndex = 3;
             // 
             // btnRecorrer
@@ -106,15 +106,15 @@
             // 
             // tbArbolH
             // 
-            this.tbArbolH.Location = new System.Drawing.Point(170, 61);
+            this.tbArbolH.Location = new System.Drawing.Point(130, 57);
             this.tbArbolH.Name = "tbArbolH";
-            this.tbArbolH.Size = new System.Drawing.Size(156, 26);
+            this.tbArbolH.Size = new System.Drawing.Size(202, 26);
             this.tbArbolH.TabIndex = 7;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 60);
+            this.label2.Location = new System.Drawing.Point(12, 60);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 20);
             this.label2.TabIndex = 8;
@@ -123,7 +123,7 @@
             // lblEstadoArbol
             // 
             this.lblEstadoArbol.AutoSize = true;
-            this.lblEstadoArbol.Location = new System.Drawing.Point(200, 101);
+            this.lblEstadoArbol.Location = new System.Drawing.Point(12, 102);
             this.lblEstadoArbol.Name = "lblEstadoArbol";
             this.lblEstadoArbol.Size = new System.Drawing.Size(126, 20);
             this.lblEstadoArbol.TabIndex = 9;

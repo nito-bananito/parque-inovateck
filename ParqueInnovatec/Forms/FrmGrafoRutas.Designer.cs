@@ -40,34 +40,35 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblEstadoGrafo = new System.Windows.Forms.Label();
+            this.btnValidarConexion = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbOrigen
             // 
-            this.tbOrigen.Location = new System.Drawing.Point(108, 23);
+            this.tbOrigen.Location = new System.Drawing.Point(78, 6);
             this.tbOrigen.Name = "tbOrigen";
-            this.tbOrigen.Size = new System.Drawing.Size(183, 26);
+            this.tbOrigen.Size = new System.Drawing.Size(225, 26);
             this.tbOrigen.TabIndex = 0;
             // 
             // tbDestino
             // 
-            this.tbDestino.Location = new System.Drawing.Point(108, 62);
+            this.tbDestino.Location = new System.Drawing.Point(82, 43);
             this.tbDestino.Name = "tbDestino";
-            this.tbDestino.Size = new System.Drawing.Size(183, 26);
+            this.tbDestino.Size = new System.Drawing.Size(221, 26);
             this.tbDestino.TabIndex = 1;
             // 
             // tbPeso
             // 
-            this.tbPeso.Location = new System.Drawing.Point(108, 104);
+            this.tbPeso.Location = new System.Drawing.Point(93, 79);
             this.tbPeso.Name = "tbPeso";
-            this.tbPeso.Size = new System.Drawing.Size(183, 26);
+            this.tbPeso.Size = new System.Drawing.Size(210, 26);
             this.tbPeso.TabIndex = 2;
             // 
             // btnAgregarConexiones
             // 
-            this.btnAgregarConexiones.Location = new System.Drawing.Point(297, 15);
+            this.btnAgregarConexiones.Location = new System.Drawing.Point(324, -5);
             this.btnAgregarConexiones.Name = "btnAgregarConexiones";
-            this.btnAgregarConexiones.Size = new System.Drawing.Size(220, 37);
+            this.btnAgregarConexiones.Size = new System.Drawing.Size(191, 37);
             this.btnAgregarConexiones.TabIndex = 3;
             this.btnAgregarConexiones.Text = "Agregar conexiones";
             this.btnAgregarConexiones.UseVisualStyleBackColor = true;
@@ -75,9 +76,9 @@
             // 
             // btnRutaCorta
             // 
-            this.btnRutaCorta.Location = new System.Drawing.Point(297, 58);
+            this.btnRutaCorta.Location = new System.Drawing.Point(324, 33);
             this.btnRutaCorta.Name = "btnRutaCorta";
-            this.btnRutaCorta.Size = new System.Drawing.Size(220, 35);
+            this.btnRutaCorta.Size = new System.Drawing.Size(191, 35);
             this.btnRutaCorta.TabIndex = 4;
             this.btnRutaCorta.Text = "Ruta mas corta";
             this.btnRutaCorta.UseVisualStyleBackColor = true;
@@ -85,9 +86,9 @@
             // 
             // btnMostarConexioness
             // 
-            this.btnMostarConexioness.Location = new System.Drawing.Point(297, 99);
+            this.btnMostarConexioness.Location = new System.Drawing.Point(324, 74);
             this.btnMostarConexioness.Name = "btnMostarConexioness";
-            this.btnMostarConexioness.Size = new System.Drawing.Size(220, 36);
+            this.btnMostarConexioness.Size = new System.Drawing.Size(193, 36);
             this.btnMostarConexioness.TabIndex = 5;
             this.btnMostarConexioness.Text = "Mostar conexiones";
             this.btnMostarConexioness.UseVisualStyleBackColor = true;
@@ -114,7 +115,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 23);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 20);
             this.label1.TabIndex = 8;
@@ -123,7 +124,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 68);
+            this.label2.Location = new System.Drawing.Point(8, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 20);
             this.label2.TabIndex = 9;
@@ -132,7 +133,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 110);
+            this.label3.Location = new System.Drawing.Point(8, 85);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 20);
             this.label3.TabIndex = 10;
@@ -141,17 +142,27 @@
             // lblEstadoGrafo
             // 
             this.lblEstadoGrafo.AutoSize = true;
-            this.lblEstadoGrafo.Location = new System.Drawing.Point(12, 142);
+            this.lblEstadoGrafo.Location = new System.Drawing.Point(12, 130);
             this.lblEstadoGrafo.Name = "lblEstadoGrafo";
             this.lblEstadoGrafo.Size = new System.Drawing.Size(130, 20);
             this.lblEstadoGrafo.TabIndex = 11;
             this.lblEstadoGrafo.Text = "Estado del Grafo";
+            // 
+            // btnValidarConexion
+            // 
+            this.btnValidarConexion.Location = new System.Drawing.Point(324, 116);
+            this.btnValidarConexion.Name = "btnValidarConexion";
+            this.btnValidarConexion.Size = new System.Drawing.Size(191, 32);
+            this.btnValidarConexion.TabIndex = 12;
+            this.btnValidarConexion.Text = "Validar conexion";
+            this.btnValidarConexion.UseVisualStyleBackColor = true;
             // 
             // FrmGrafoRutas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(529, 450);
+            this.Controls.Add(this.btnValidarConexion);
             this.Controls.Add(this.lblEstadoGrafo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -185,5 +196,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblEstadoGrafo;
+        private System.Windows.Forms.Button btnValidarConexion;
     }
 }

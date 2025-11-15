@@ -22,17 +22,33 @@ namespace ParqueInnovatec.Forms
         }
         private void btnAgregarConexiones_Click(object sender, EventArgs e)
         {
-            tbOrigen.Focus();
-            string origen = tbOrigen.Text;
-            string destino = tbDestino.Text;
-            int peso = int.Parse(tbPeso.Text);
+            string origen = tbOrigen.Text.Trim();
+            string destino = tbDestino.Text.Trim();
+            string pesoText = tbPeso.Text.Trim();
+
+            // Validación: campos vacíos
+            if (string.IsNullOrWhiteSpace(origen) || string.IsNullOrWhiteSpace(destino) || string.IsNullOrWhiteSpace(pesoText))
+            {
+                lblEstadoGrafo.Text = "Debe ingresar origen, destino y peso.";
+                return;
+            }
+
+            if (!int.TryParse(tbPeso.Text.Trim(), out int peso))
+            {
+                lblEstadoGrafo.Text = "Peso inválido.";
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(origen) || string.IsNullOrWhiteSpace(destino))
+            {
+                lblEstadoGrafo.Text = "Ingrese origen y destino.";
+                return;
+            }
 
             grafo.AgregarArista(origen, destino, peso);
-
-            lbConexiones.Items.Add($"Conexión: {origen} ↔ {destino} con peso {peso}");
+            lbConexiones.Items.Add($"Conexión: {origen} ↔ {destino} (peso {peso})");
             lblEstadoGrafo.Text = $"Se agregó conexión entre '{origen}' y '{destino}' con peso {peso}.";
-            tbDestino.Clear();
             tbPeso.Clear();
+            tbDestino.Clear();
             tbOrigen.Clear();
             tbOrigen.Focus();
         }
@@ -40,29 +56,48 @@ namespace ParqueInnovatec.Forms
         private void btnMostarConexioness_Click(object sender, EventArgs e)
         {
             lbConexiones.Items.Clear();
-            var conexiones = grafo.ObtenerConexiones();
-            foreach (var v in conexiones)
-            {
-                foreach (var (destino, peso) in v.Value)
-                {
-                    lbConexiones.Items.Add($"{v.Key} ↔ {destino} ({peso})");
-                }
-            }
+            foreach (var kv in grafo.ObtenerConexiones())
+                foreach (var (destino, peso) in kv.Value)
+                    lbConexiones.Items.Add($"{kv.Key} ↔ {destino} ({peso})");
             lblEstadoGrafo.Text = "Conexiones mostradas.";
         }
 
         private void btnRutaCorta_Click(object sender, EventArgs e)
         {
-            string inicio = tbOrigen.Text; // usamos el origen como nodo inicial
-            var distancias = grafo.Dijkstra(inicio);
-
-            lbRutas.Items.Clear();
-            foreach (var kvp in distancias)
+            string inicio = tbOrigen.Text.Trim();
+            string destino = tbDestino.Text.Trim();
+            if (string.IsNullOrWhiteSpace(inicio) || string.IsNullOrWhiteSpace(destino))
             {
-                lbRutas.Items.Add($"Desde '{inicio}' hasta '{kvp.Key}': {kvp.Value}");
+                lblEstadoGrafo.Text = "Ingrese inicio y destino de la ruta.";
+                return;
             }
 
-            lblEstadoGrafo.Text = $"Ruta más corta calculada desde '{inicio}'.";
+            var (dist, prev) = grafo.Dijkstra(inicio);
+            lbRutas.Items.Clear();
+
+            if (!dist.ContainsKey(destino) || dist[destino] == int.MaxValue)
+            {
+                lblEstadoGrafo.Text = $"No hay ruta de '{inicio}' a '{destino}'.";
+                return;
+            }
+
+            var ruta = grafo.ReconstruirRuta(inicio, destino, prev);
+            if (ruta.Count == 0)
+            {
+                lblEstadoGrafo.Text = $"No se pudo reconstruir la ruta de '{inicio}' a '{destino}'.";
+                return;
+            }
+
+            lbRutas.Items.Add($"Distancia mínima: {dist[destino]}");
+            lbRutas.Items.Add("Ruta:");
+            foreach (var v in ruta) lbRutas.Items.Add($" - {v}");
+
+            lblEstadoGrafo.Text = $"Ruta más corta calculada de '{inicio}' a '{destino}'.";
+        }
+
+        private void btnValidarConexion_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
