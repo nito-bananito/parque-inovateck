@@ -71,4 +71,4 @@ El sistema permite:
 
 ## 🧑‍💻 Autor
 - **Joshua** — Universidad Americana (UAM)  
-- Proyecto académico: **Fundamentos de Robótica
+- Proyecto académico: **Programacion estructurada
