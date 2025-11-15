@@ -52,12 +52,15 @@ namespace ParqueInnovatec.Forms
                     tvPadre[0].Expand();
                 }
                 lblEstadoArbol.Text = $"Se agregó el hijo '{hijo}' al padre '{padre}'.";
-                tbArbolH.Clear();
+
+               
             }
             else
             {
                 lblEstadoArbol.Text = $"El padre '{padre}' no fue encontrado.";
-            }
+            } 
+            tbArbolH.Clear();
+            tbArbolH.Focus();
         }
 
         private void btnRecorrer_Click(object sender, EventArgs e)

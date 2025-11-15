@@ -30,7 +30,7 @@
         {
             this.tbOrigen = new System.Windows.Forms.TextBox();
             this.tbDestino = new System.Windows.Forms.TextBox();
-            this.tbPeso = new System.Windows.Forms.TextBox();
+            this.tbDistancia = new System.Windows.Forms.TextBox();
             this.btnAgregarConexiones = new System.Windows.Forms.Button();
             this.btnRutaCorta = new System.Windows.Forms.Button();
             this.btnMostarConexioness = new System.Windows.Forms.Button();
@@ -57,12 +57,12 @@
             this.tbDestino.Size = new System.Drawing.Size(221, 26);
             this.tbDestino.TabIndex = 1;
             // 
-            // tbPeso
+            // tbDistancia
             // 
-            this.tbPeso.Location = new System.Drawing.Point(93, 79);
-            this.tbPeso.Name = "tbPeso";
-            this.tbPeso.Size = new System.Drawing.Size(210, 26);
-            this.tbPeso.TabIndex = 2;
+            this.tbDistancia.Location = new System.Drawing.Point(93, 79);
+            this.tbDistancia.Name = "tbDistancia";
+            this.tbDistancia.Size = new System.Drawing.Size(210, 26);
+            this.tbDistancia.TabIndex = 2;
             // 
             // btnAgregarConexiones
             // 
@@ -98,16 +98,17 @@
             // 
             this.lbConexiones.FormattingEnabled = true;
             this.lbConexiones.ItemHeight = 20;
-            this.lbConexiones.Location = new System.Drawing.Point(12, 165);
+            this.lbConexiones.Location = new System.Drawing.Point(12, 177);
             this.lbConexiones.Name = "lbConexiones";
             this.lbConexiones.Size = new System.Drawing.Size(236, 284);
             this.lbConexiones.TabIndex = 6;
+            this.lbConexiones.SelectedIndexChanged += new System.EventHandler(this.lbConexiones_SelectedIndexChanged);
             // 
             // lbRutas
             // 
             this.lbRutas.FormattingEnabled = true;
             this.lbRutas.ItemHeight = 20;
-            this.lbRutas.Location = new System.Drawing.Point(268, 165);
+            this.lbRutas.Location = new System.Drawing.Point(266, 177);
             this.lbRutas.Name = "lbRutas";
             this.lbRutas.Size = new System.Drawing.Size(249, 284);
             this.lbRutas.TabIndex = 7;
@@ -142,7 +143,7 @@
             // lblEstadoGrafo
             // 
             this.lblEstadoGrafo.AutoSize = true;
-            this.lblEstadoGrafo.Location = new System.Drawing.Point(12, 130);
+            this.lblEstadoGrafo.Location = new System.Drawing.Point(8, 154);
             this.lblEstadoGrafo.Name = "lblEstadoGrafo";
             this.lblEstadoGrafo.Size = new System.Drawing.Size(130, 20);
             this.lblEstadoGrafo.TabIndex = 11;
@@ -156,12 +157,13 @@
             this.btnValidarConexion.TabIndex = 12;
             this.btnValidarConexion.Text = "Validar conexion";
             this.btnValidarConexion.UseVisualStyleBackColor = true;
+            this.btnValidarConexion.Click += new System.EventHandler(this.btnValidarConexion_Click);
             // 
             // FrmGrafoRutas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(529, 450);
+            this.ClientSize = new System.Drawing.Size(529, 470);
             this.Controls.Add(this.btnValidarConexion);
             this.Controls.Add(this.lblEstadoGrafo);
             this.Controls.Add(this.label3);
@@ -172,7 +174,7 @@
             this.Controls.Add(this.btnMostarConexioness);
             this.Controls.Add(this.btnRutaCorta);
             this.Controls.Add(this.btnAgregarConexiones);
-            this.Controls.Add(this.tbPeso);
+            this.Controls.Add(this.tbDistancia);
             this.Controls.Add(this.tbDestino);
             this.Controls.Add(this.tbOrigen);
             this.Name = "FrmGrafoRutas";
@@ -186,7 +188,7 @@
 
         private System.Windows.Forms.TextBox tbOrigen;
         private System.Windows.Forms.TextBox tbDestino;
-        private System.Windows.Forms.TextBox tbPeso;
+        private System.Windows.Forms.TextBox tbDistancia;
         private System.Windows.Forms.Button btnAgregarConexiones;
         private System.Windows.Forms.Button btnRutaCorta;
         private System.Windows.Forms.Button btnMostarConexioness;
