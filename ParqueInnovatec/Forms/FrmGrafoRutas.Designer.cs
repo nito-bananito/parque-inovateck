@@ -39,6 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.lblEstadoGrafo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tbOrigen
@@ -64,36 +65,39 @@
             // 
             // btnAgregarConexiones
             // 
-            this.btnAgregarConexiones.Location = new System.Drawing.Point(324, 15);
+            this.btnAgregarConexiones.Location = new System.Drawing.Point(297, 15);
             this.btnAgregarConexiones.Name = "btnAgregarConexiones";
-            this.btnAgregarConexiones.Size = new System.Drawing.Size(166, 37);
+            this.btnAgregarConexiones.Size = new System.Drawing.Size(220, 37);
             this.btnAgregarConexiones.TabIndex = 3;
             this.btnAgregarConexiones.Text = "Agregar conexiones";
             this.btnAgregarConexiones.UseVisualStyleBackColor = true;
+            this.btnAgregarConexiones.Click += new System.EventHandler(this.btnAgregarConexiones_Click);
             // 
             // btnRutaCorta
             // 
-            this.btnRutaCorta.Location = new System.Drawing.Point(324, 58);
+            this.btnRutaCorta.Location = new System.Drawing.Point(297, 58);
             this.btnRutaCorta.Name = "btnRutaCorta";
-            this.btnRutaCorta.Size = new System.Drawing.Size(166, 35);
+            this.btnRutaCorta.Size = new System.Drawing.Size(220, 35);
             this.btnRutaCorta.TabIndex = 4;
             this.btnRutaCorta.Text = "Ruta mas corta";
             this.btnRutaCorta.UseVisualStyleBackColor = true;
+            this.btnRutaCorta.Click += new System.EventHandler(this.btnRutaCorta_Click);
             // 
             // btnMostarConexioness
             // 
-            this.btnMostarConexioness.Location = new System.Drawing.Point(324, 99);
+            this.btnMostarConexioness.Location = new System.Drawing.Point(297, 99);
             this.btnMostarConexioness.Name = "btnMostarConexioness";
-            this.btnMostarConexioness.Size = new System.Drawing.Size(166, 36);
+            this.btnMostarConexioness.Size = new System.Drawing.Size(220, 36);
             this.btnMostarConexioness.TabIndex = 5;
             this.btnMostarConexioness.Text = "Mostar conexiones";
             this.btnMostarConexioness.UseVisualStyleBackColor = true;
+            this.btnMostarConexioness.Click += new System.EventHandler(this.btnMostarConexioness_Click);
             // 
             // lbConexiones
             // 
             this.lbConexiones.FormattingEnabled = true;
             this.lbConexiones.ItemHeight = 20;
-            this.lbConexiones.Location = new System.Drawing.Point(37, 140);
+            this.lbConexiones.Location = new System.Drawing.Point(12, 165);
             this.lbConexiones.Name = "lbConexiones";
             this.lbConexiones.Size = new System.Drawing.Size(236, 284);
             this.lbConexiones.TabIndex = 6;
@@ -102,9 +106,9 @@
             // 
             this.lbRutas.FormattingEnabled = true;
             this.lbRutas.ItemHeight = 20;
-            this.lbRutas.Location = new System.Drawing.Point(296, 140);
+            this.lbRutas.Location = new System.Drawing.Point(268, 165);
             this.lbRutas.Name = "lbRutas";
-            this.lbRutas.Size = new System.Drawing.Size(215, 284);
+            this.lbRutas.Size = new System.Drawing.Size(249, 284);
             this.lbRutas.TabIndex = 7;
             // 
             // label1
@@ -134,11 +138,21 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "Distancia:";
             // 
+            // lblEstadoGrafo
+            // 
+            this.lblEstadoGrafo.AutoSize = true;
+            this.lblEstadoGrafo.Location = new System.Drawing.Point(12, 142);
+            this.lblEstadoGrafo.Name = "lblEstadoGrafo";
+            this.lblEstadoGrafo.Size = new System.Drawing.Size(130, 20);
+            this.lblEstadoGrafo.TabIndex = 11;
+            this.lblEstadoGrafo.Text = "Estado del Grafo";
+            // 
             // FrmGrafoRutas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(529, 450);
+            this.Controls.Add(this.lblEstadoGrafo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -170,5 +184,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblEstadoGrafo;
     }
 }

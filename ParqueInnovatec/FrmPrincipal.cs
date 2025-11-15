@@ -27,5 +27,10 @@ namespace ParqueInnovatec
         {
             new FrmGrafoRutas().Show();
         }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
