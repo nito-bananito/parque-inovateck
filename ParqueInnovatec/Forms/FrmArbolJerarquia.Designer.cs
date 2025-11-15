@@ -31,23 +31,27 @@
             this.tvJerarquia = new System.Windows.Forms.TreeView();
             this.label1 = new System.Windows.Forms.Label();
             this.btnInsertar = new System.Windows.Forms.Button();
-            this.tbDato = new System.Windows.Forms.TextBox();
+            this.tbArbolP = new System.Windows.Forms.TextBox();
             this.btnRecorrer = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnContar = new System.Windows.Forms.Button();
+            this.tbArbolH = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblEstadoArbol = new System.Windows.Forms.Label();
+            this.lbRecorrido = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // tvJerarquia
             // 
-            this.tvJerarquia.Location = new System.Drawing.Point(38, 81);
+            this.tvJerarquia.Location = new System.Drawing.Point(12, 134);
             this.tvJerarquia.Name = "tvJerarquia";
-            this.tvJerarquia.Size = new System.Drawing.Size(287, 339);
+            this.tvJerarquia.Size = new System.Drawing.Size(252, 304);
             this.tvJerarquia.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 29);
+            this.label1.Location = new System.Drawing.Point(12, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(111, 20);
             this.label1.TabIndex = 1;
@@ -57,26 +61,28 @@
             // 
             this.btnInsertar.Location = new System.Drawing.Point(345, 14);
             this.btnInsertar.Name = "btnInsertar";
-            this.btnInsertar.Size = new System.Drawing.Size(75, 35);
+            this.btnInsertar.Size = new System.Drawing.Size(96, 35);
             this.btnInsertar.TabIndex = 2;
             this.btnInsertar.Text = "Insertar";
             this.btnInsertar.UseVisualStyleBackColor = true;
+            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
             // 
-            // tbDato
+            // tbArbolP
             // 
-            this.tbDato.Location = new System.Drawing.Point(169, 29);
-            this.tbDato.Name = "tbDato";
-            this.tbDato.Size = new System.Drawing.Size(156, 26);
-            this.tbDato.TabIndex = 3;
+            this.tbArbolP.Location = new System.Drawing.Point(129, 14);
+            this.tbArbolP.Name = "tbArbolP";
+            this.tbArbolP.Size = new System.Drawing.Size(203, 26);
+            this.tbArbolP.TabIndex = 3;
             // 
             // btnRecorrer
             // 
             this.btnRecorrer.Location = new System.Drawing.Point(345, 60);
             this.btnRecorrer.Name = "btnRecorrer";
-            this.btnRecorrer.Size = new System.Drawing.Size(75, 35);
+            this.btnRecorrer.Size = new System.Drawing.Size(96, 35);
             this.btnRecorrer.TabIndex = 4;
             this.btnRecorrer.Text = "Recorrer";
             this.btnRecorrer.UseVisualStyleBackColor = true;
+            this.btnRecorrer.Click += new System.EventHandler(this.btnRecorrer_Click);
             // 
             // btnBuscar
             // 
@@ -86,6 +92,7 @@
             this.btnBuscar.TabIndex = 5;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnContar
             // 
@@ -95,16 +102,55 @@
             this.btnContar.TabIndex = 6;
             this.btnContar.Text = "Contar";
             this.btnContar.UseVisualStyleBackColor = true;
+            this.btnContar.Click += new System.EventHandler(this.btnContar_Click);
+            // 
+            // tbArbolH
+            // 
+            this.tbArbolH.Location = new System.Drawing.Point(130, 57);
+            this.tbArbolH.Name = "tbArbolH";
+            this.tbArbolH.Size = new System.Drawing.Size(202, 26);
+            this.tbArbolH.TabIndex = 7;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 60);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(112, 20);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Ingresar rama:";
+            // 
+            // lblEstadoArbol
+            // 
+            this.lblEstadoArbol.AutoSize = true;
+            this.lblEstadoArbol.Location = new System.Drawing.Point(12, 102);
+            this.lblEstadoArbol.Name = "lblEstadoArbol";
+            this.lblEstadoArbol.Size = new System.Drawing.Size(126, 20);
+            this.lblEstadoArbol.TabIndex = 9;
+            this.lblEstadoArbol.Text = "Estado del Arbol";
+            // 
+            // lbRecorrido
+            // 
+            this.lbRecorrido.FormattingEnabled = true;
+            this.lbRecorrido.ItemHeight = 20;
+            this.lbRecorrido.Location = new System.Drawing.Point(288, 134);
+            this.lbRecorrido.Name = "lbRecorrido";
+            this.lbRecorrido.Size = new System.Drawing.Size(241, 304);
+            this.lbRecorrido.TabIndex = 10;
             // 
             // FrmArbolJerarquia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(541, 450);
+            this.Controls.Add(this.lbRecorrido);
+            this.Controls.Add(this.lblEstadoArbol);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.tbArbolH);
             this.Controls.Add(this.btnContar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnRecorrer);
-            this.Controls.Add(this.tbDato);
+            this.Controls.Add(this.tbArbolP);
             this.Controls.Add(this.btnInsertar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tvJerarquia);
@@ -120,9 +166,13 @@
         private System.Windows.Forms.TreeView tvJerarquia;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnInsertar;
-        private System.Windows.Forms.TextBox tbDato;
+        private System.Windows.Forms.TextBox tbArbolP;
         private System.Windows.Forms.Button btnRecorrer;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnContar;
+        private System.Windows.Forms.TextBox tbArbolH;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblEstadoArbol;
+        private System.Windows.Forms.ListBox lbRecorrido;
     }
 }

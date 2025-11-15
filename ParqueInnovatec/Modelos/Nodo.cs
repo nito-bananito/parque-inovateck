@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace ParqueInnovatec.Modelos
 {
-    internal class Nodo
+    public class Nodo
     {
+        public string Nombre { get; set; }
+        public List<Nodo> Hijos { get; }
+
+        public Nodo(string nombre)
+        {
+            Nombre = nombre;
+            Hijos = new List<Nodo>();
+        }
+
+        public void AgregarHijo(Nodo hijo) => Hijos.Add(hijo);
     }
 }
