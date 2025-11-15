@@ -69,4 +69,6 @@ El sistema permite:
 
 ---
 
-## 📂 Organización del repositorio
+## 🧑‍💻 Autor
+- **Joshua** — Universidad Americana (UAM)  
+- Proyecto académico: **Fundamentos de Robótica
