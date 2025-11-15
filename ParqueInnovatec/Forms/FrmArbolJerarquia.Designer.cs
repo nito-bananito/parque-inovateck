@@ -37,13 +37,14 @@
             this.btnContar = new System.Windows.Forms.Button();
             this.tbArbolH = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblEstadoArbol = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tvJerarquia
             // 
-            this.tvJerarquia.Location = new System.Drawing.Point(12, 99);
+            this.tvJerarquia.Location = new System.Drawing.Point(12, 134);
             this.tvJerarquia.Name = "tvJerarquia";
-            this.tvJerarquia.Size = new System.Drawing.Size(510, 339);
+            this.tvJerarquia.Size = new System.Drawing.Size(510, 304);
             this.tvJerarquia.TabIndex = 0;
             // 
             // label1
@@ -114,11 +115,21 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Ingresar rama:";
             // 
+            // lblEstadoArbol
+            // 
+            this.lblEstadoArbol.AutoSize = true;
+            this.lblEstadoArbol.Location = new System.Drawing.Point(166, 100);
+            this.lblEstadoArbol.Name = "lblEstadoArbol";
+            this.lblEstadoArbol.Size = new System.Drawing.Size(124, 20);
+            this.lblEstadoArbol.TabIndex = 9;
+            this.lblEstadoArbol.Text = "Estado del arbol";
+            // 
             // FrmArbolJerarquia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(541, 450);
+            this.Controls.Add(this.lblEstadoArbol);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbArbolH);
             this.Controls.Add(this.btnContar);
@@ -146,5 +157,6 @@
         private System.Windows.Forms.Button btnContar;
         private System.Windows.Forms.TextBox tbArbolH;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblEstadoArbol;
     }
 }
