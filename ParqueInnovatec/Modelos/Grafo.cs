@@ -33,7 +33,6 @@ namespace ParqueInnovatec.Modelos
         {
             var dist = adyacencia.Keys.ToDictionary(v => v, v => int.MaxValue);
             dist[inicio] = 0;
-            var visitados = new HashSet<string>();
 
             while (visitados.Count < adyacencia.Count)
             {
