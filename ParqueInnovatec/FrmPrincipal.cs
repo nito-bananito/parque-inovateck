@@ -62,6 +62,10 @@ namespace ParqueInnovatec
                                  MessageBoxButtons.YesNo,
                                  MessageBoxIcon.Question);
                             }
+                            else if (una == DialogResult.Yes)
+                            {
+                              Application.Exit();
+                            }
                             else if (una == DialogResult.No)
                             {
                                 return;

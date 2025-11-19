@@ -59,8 +59,6 @@ namespace ParqueInnovatec.Forms
             {
                 lblEstadoArbol.Text = $"El padre '{padre}' no fue encontrado.";
             } 
-            tbArbolH.Clear();
-            tbArbolH.Focus();
         }
 
         private void btnRecorrer_Click(object sender, EventArgs e)
